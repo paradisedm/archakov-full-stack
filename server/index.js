@@ -11,7 +11,9 @@ import { registerValidation, loginValidation, postCreateValidation } from './val
 
 
 mongoose.connect(
-	'mongodb+srv://paradisedmx_db_user:gDCkRF0bf9OBzrAN@cluster0.yf7hjxq.mongodb.net/blog')
+	// 'mongodb+srv://paradisedmx_db_user:gDCkRF0bf9OBzrAN@cluster0.yf7hjxq.mongodb.net/blog'
+	process.env.MONGODB_URI
+)
 	.then(() => console.log('DB ok'))
 	.catch(() => console.log('DB error', err));
 
